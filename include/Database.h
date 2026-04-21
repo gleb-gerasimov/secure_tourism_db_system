@@ -25,7 +25,7 @@ public:
     bool updateRecord(const Record& record);
     bool deleteRecord(int id);
 
-    QVector<Record> getAllRecords();
+    [[nodiscard]] QVector<Record> getAllRecords() const;
 
 private:
     QSqlDatabase db;
