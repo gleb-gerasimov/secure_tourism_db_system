@@ -15,7 +15,6 @@ public:
 
     [[nodiscard]] QByteArray encrypt(const QString& plainText) const;
     [[nodiscard]] QString decrypt(const QByteArray& data) const;
-    [[nodiscard]] QString hash(const QString& data) const;
 
 private:
     QByteArray m_key;

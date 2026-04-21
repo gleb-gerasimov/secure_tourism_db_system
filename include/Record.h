@@ -29,11 +29,6 @@ struct Record {
 
     int participants;
     double price;
-
-    QString startDateHash;
-    QString endDateHash;
-    QString typeHash;
-    QString countryHash;
 };
 
 #endif // SECURE_TOURISM_DB_SYSTEM_RECORD_H
