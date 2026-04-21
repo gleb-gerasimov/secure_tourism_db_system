@@ -14,6 +14,8 @@ add_executable(secure_tourism_db_system main.cpp
         include/EncryptionManager.h
         src/Record.cpp
         include/Record.h
+        src/Controller.cpp
+        include/Controller.h
 )
 
 target_include_directories(secure_tourism_db_system PRIVATE include)
