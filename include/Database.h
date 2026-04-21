@@ -27,10 +27,6 @@ public:
 
     QVector<Record> getAllRecords();
 
-    QVector<Record> findByPeriod(const QString& period);
-    QVector<Record> findByType(const QString& type);
-    QVector<Record> findByCountry(const QString& country);
-
 private:
     QSqlDatabase db;
 
