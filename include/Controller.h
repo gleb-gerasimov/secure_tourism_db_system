@@ -27,7 +27,7 @@ public:
         const std::optional<QString>& type
     ) const;
 
-    [[nodiscard]] QVector<Record> findByFilters(
+    [[nodiscard]] QVector<Record> findTours(
         const QDate& startDate,
         const QDate& endDate,
         const QString& country,
