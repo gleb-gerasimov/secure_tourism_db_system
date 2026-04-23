@@ -16,6 +16,8 @@ add_executable(secure_tourism_db_system src/main.cpp
         include/Record.h
         src/Controller.cpp
         include/Controller.h
+        include/mainwindow.h
+        src/mainwindow.cpp
 )
 
 target_include_directories(secure_tourism_db_system PRIVATE include)
