@@ -13,7 +13,339 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="addRecordTab">
+       <attribute name="title">
+        <string>Добавить запись</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QVBoxLayout" name="addVerticalLayout">
+          <item>
+           <layout class="QFormLayout" name="recordFormLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="recordFullNameLabel">
+              <property name="text">
+               <string>Полное имя:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="recordFullNameLineEdit"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="recordHomeAddressLabel">
+              <property name="text">
+               <string>Домашний адрес:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="recordHomeAddressLineEdit"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="recordPhoneNumberLabel">
+              <property name="text">
+               <string>Телефонный номер:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="recordPhoneNumberLineEdit"/>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="recordHotelNameLabel">
+              <property name="text">
+               <string>Название отеля:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="recordHotelNameLineEdit"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="recordHotelAddressLabel">
+              <property name="text">
+               <string>Адрес отеля:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="recordHotelAddressLineEdit"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="recordStartDateLabel">
+              <property name="text">
+               <string>Дата начала:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QDateEdit" name="recordStartDateDateEdit"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QLabel" name="recordEndDateLabel">
+              <property name="text">
+               <string>Дата конца:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <widget class="QDateEdit" name="recordEndDateDateEdit"/>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="recordTypeLabel">
+              <property name="text">
+               <string>Вид тура:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QLineEdit" name="recordTypeLineEdit"/>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="recordCountryLabel">
+              <property name="text">
+               <string>Страна тура:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QLineEdit" name="recordCountryLineEdit"/>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="recordHasFlightLabel">
+              <property name="text">
+               <string>Авиаперелёт:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QCheckBox" name="recordHasFlightCheckBox">
+              <property name="text">
+               <string>Присутствует</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLabel" name="recordParticipantsLabel">
+              <property name="text">
+               <string>Кол-во участников:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="1">
+             <widget class="QSpinBox" name="recordParticipantsSpinBox"/>
+            </item>
+            <item row="11" column="0">
+             <widget class="QLabel" name="recordPriceLabel">
+              <property name="text">
+               <string>Цена билета:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="11" column="1">
+             <widget class="QDoubleSpinBox" name="recordPriceDoubleSpinBox"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addRecordPushButton">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabTable">
+       <attribute name="title">
+        <string>Просмотр таблицы</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="tableVerticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="tableHorizontalLayout">
+            <item>
+             <layout class="QFormLayout" name="tableFormLayout">
+              <item row="0" column="0">
+               <widget class="QLabel" name="tableStartDateLabel">
+                <property name="text">
+                 <string>Дата начала:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDateEdit" name="tableStartDateDateEdit"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="tableEndDateLabel">
+                <property name="text">
+                 <string>Дата конца:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDateEdit" name="tableEndDateDateEdit"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="tableTypeLabel">
+                <property name="text">
+                 <string>Вид тура:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="tableTypeLineEdit"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="tableCountryLabel">
+                <property name="text">
+                 <string>Страна тура:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="tableCountryLineEdit"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="tableHasFlightLabel">
+                <property name="text">
+                 <string>Авиаперелёт:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="tableParticipantsLabel">
+                <property name="text">
+                 <string>Кол-во участников:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QSpinBox" name="tableParticipantsSpinBox"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="tablePriceLabel">
+                <property name="text">
+                 <string>Цена билета:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QDoubleSpinBox" name="tablePriceDoubleSpinBox"/>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="tableHasFlightCheckBox">
+                <property name="text">
+                 <string>Присутствует</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="tableFindPushButton">
+              <property name="text">
+               <string>Найти</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tableTableWidget"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="averagePriceTab">
+       <attribute name="title">
+        <string>Средняя стоимость</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="averageVerticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="averageResultHorizontalLayout">
+            <item>
+             <widget class="QLabel" name="averageAveragePriceLabel">
+              <property name="text">
+               <string>Средняя стомость:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="averageResultLabel">
+              <property name="text">
+               <string>-</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="averageFiltersHorizontalLayout">
+            <item>
+             <layout class="QFormLayout" name="averageFormLayout">
+              <property name="formAlignment">
+               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="averageTypeLabel">
+                <property name="text">
+                 <string>Вид тура:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="averageCountryLabel">
+                <property name="text">
+                 <string>Страна тура:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="averageTypeLineEdit"/>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="averageCountryLineEdit"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="averagePricePushButton">
+              <property name="text">
+               <string>Расчитать</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -23,6 +355,12 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuTourManager">
+    <property name="title">
+     <string>TourManager</string>
+    </property>
+   </widget>
+   <addaction name="menuTourManager"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
