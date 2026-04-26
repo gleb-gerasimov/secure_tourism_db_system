@@ -8,12 +8,16 @@
 #include <QString>
 #include <QByteArray>
 
+
 class EncryptionManager {
 public:
     [[nodiscard]] static QByteArray encrypt(const QString& plainText);
     [[nodiscard]] static QString decrypt(const QByteArray& encryptedData);
 
 private:
+    static constexpr int KEY_SIZE = 32;
+    static constexpr int IV_SIZE = 16;
+
     [[nodiscard]] static QByteArray key();
     [[nodiscard]] static QByteArray generateIV();
 };
