@@ -15,7 +15,6 @@ add_executable(secure_tourism_db_system src/main.cpp
         include/SearchManager.h
         src/EncryptionManager.cpp
         include/EncryptionManager.h
-        src/Record.cpp
         include/Record.h
         src/Controller.cpp
         include/Controller.h
