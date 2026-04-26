@@ -22,8 +22,6 @@ public:
     bool initialize();
 
     bool addRecord(const Record& record);
-    bool updateRecord(const Record& record);
-    bool deleteRecord(int id);
 
     [[nodiscard]] QVector<Record> getAllRecords() const;
 
@@ -33,7 +31,5 @@ private:
     static bool executeQuery(QSqlQuery& query);
     [[nodiscard]] Record parseRecord(const QSqlQuery& query) const;
 };
-
-
 
 #endif //SECURE_TOURISM_DB_SYSTEM_DATABASE_H
