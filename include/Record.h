@@ -10,14 +10,14 @@
 #include <QByteArray>
 
 struct Record {
-    int id;
+    int id = -1;
 
-    QByteArray fullNameEncrypted;
-    QByteArray homeAddressEncrypted;
-    QByteArray phoneNumberEncrypted;
+    QString fullName;
+    QString homeAddress;
+    QString phoneNumber;
 
-    QByteArray hotelNameEncrypted;
-    QByteArray hotelAddressEncrypted;
+    QString hotelName;
+    QString hotelAddress;
 
     QDate startDate;
     QDate endDate;
@@ -25,10 +25,10 @@ struct Record {
     QString type;
     QString country;
 
-    bool hasFlight;
+    bool hasFlight = false;
 
-    int participants;
-    double price;
+    int participants = 0;
+    double price = 0.0;
 };
 
 #endif // SECURE_TOURISM_DB_SYSTEM_RECORD_H
