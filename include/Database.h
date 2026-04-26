@@ -30,7 +30,7 @@ public:
 private:
     QSqlDatabase db;
 
-    bool executeQuery(QSqlQuery& query);
+    static bool executeQuery(QSqlQuery& query);
     [[nodiscard]] Record parseRecord(const QSqlQuery& query) const;
 };
 
