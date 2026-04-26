@@ -7,7 +7,7 @@
 
 #include <QDate>
 #include <QString>
-#include <QByteArray>
+
 
 struct Record {
     int id = -1;
