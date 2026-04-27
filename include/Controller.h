@@ -19,7 +19,7 @@ class Controller {
 public:
     Controller(Database* database, SearchManager* searchManager);
 
-    [[nodiscard]] bool addRecord(const Record& record) const;
+    bool addRecord(const Record& record) const;
 
     [[nodiscard]] QVector<Record> getAllRecords() const;
 
