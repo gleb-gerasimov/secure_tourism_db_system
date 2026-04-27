@@ -154,7 +154,7 @@
              <widget class="QComboBox" name="recordHasFlightComboBox">
               <item>
                <property name="text">
-                <string>Не указано</string>
+                <string/>
                </property>
               </item>
               <item>
@@ -273,11 +273,11 @@
               <item row="4" column="1">
                <widget class="QComboBox" name="tableHasFlightComboBox">
                 <property name="currentText">
-                 <string>Не указано</string>
+                 <string/>
                 </property>
                 <item>
                  <property name="text">
-                  <string>Не указано</string>
+                  <string/>
                  </property>
                 </item>
                 <item>

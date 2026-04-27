@@ -25,7 +25,7 @@ struct Record {
     QString type;
     QString country;
 
-    bool hasFlight = false;
+    QString hasFlight;
 
     int participants = 0;
     double price = 0.0;

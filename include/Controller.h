@@ -7,8 +7,8 @@
 
 #include "../include/Record.h"
 
-#include <QVector>
 #include <QString>
+#include <QVector>
 #include <optional>
 
 
@@ -17,30 +17,23 @@ class SearchManager;
 
 class Controller {
 public:
-    Controller(Database* database, SearchManager* searchManager);
+    Controller(Database *database, SearchManager *searchManager);
 
-    bool addRecord(const Record& record) const;
+    bool addRecord(const Record &record) const;
 
     [[nodiscard]] QVector<Record> getAllRecords() const;
 
-    [[nodiscard]] QVector<Record> findTours(
-        const std::optional<QDate>& startDate,
-        const std::optional<QDate>& endDate,
-        const std::optional<QString>& country,
-        const std::optional<QString>& type,
-        const std::optional<bool>& hasFlight,
-        const std::optional<int>& participants,
-        const std::optional<double>& price
-    ) const;
+    [[nodiscard]] QVector<Record> findTours(const std::optional<QDate> &startDate, const std::optional<QDate> &endDate,
+                                            const std::optional<QString> &country, const std::optional<QString> &type,
+                                            const std::optional<QString> &hasFlight,
+                                            const std::optional<int> &participants,
+                                            const std::optional<double> &price) const;
 
-    [[nodiscard]] double getAverageDailyCost(
-        const QString& country,
-        const QString& type
-    ) const;
+    [[nodiscard]] double getAverageDailyCost(const QString &country, const QString &type) const;
 
 private:
-    Database* m_database;
-    SearchManager* m_searchManager;
+    Database *m_database;
+    SearchManager *m_searchManager;
 };
 
 #endif // CONTROLLER_H

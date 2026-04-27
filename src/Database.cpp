@@ -9,24 +9,18 @@
 
 Database::Database() = default;
 
-Database::~Database() {
-    disconnect();
-}
+Database::~Database() { disconnect(); }
 
-bool Database::connect(const QString& path) {
+bool Database::connect(const QString &path) {
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName(path);
 
     return db.open();
 }
 
-void Database::disconnect() {
-    db.close();
-}
+void Database::disconnect() { db.close(); }
 
-bool Database::isOpen() const {
-    return db.isOpen();
-}
+bool Database::isOpen() const { return db.isOpen(); }
 
 bool Database::initialize() {
     QSqlQuery query;
@@ -58,7 +52,7 @@ bool Database::initialize() {
     return executeQuery(query);
 }
 
-bool Database::addRecord(const Record& record) {
+bool Database::addRecord(const Record &record) {
     QSqlQuery query;
 
     query.prepare(R"(
@@ -92,40 +86,19 @@ bool Database::addRecord(const Record& record) {
         )
     )");
 
-    query.bindValue(
-        ":full_name",
-        EncryptionManager::encrypt(record.fullName)
-    );
+    query.bindValue(":full_name", EncryptionManager::encrypt(record.fullName));
 
-    query.bindValue(
-        ":home_address",
-        EncryptionManager::encrypt(record.homeAddress)
-    );
+    query.bindValue(":home_address", EncryptionManager::encrypt(record.homeAddress));
 
-    query.bindValue(
-        ":phone_number",
-        EncryptionManager::encrypt(record.phoneNumber)
-    );
+    query.bindValue(":phone_number", EncryptionManager::encrypt(record.phoneNumber));
 
-    query.bindValue(
-        ":hotel_name",
-        EncryptionManager::encrypt(record.hotelName)
-    );
+    query.bindValue(":hotel_name", EncryptionManager::encrypt(record.hotelName));
 
-    query.bindValue(
-        ":hotel_address",
-        EncryptionManager::encrypt(record.hotelAddress)
-    );
+    query.bindValue(":hotel_address", EncryptionManager::encrypt(record.hotelAddress));
 
-    query.bindValue(
-        ":start_date",
-        record.startDate.toString(Qt::ISODate)
-    );
+    query.bindValue(":start_date", record.startDate.toString(Qt::ISODate));
 
-    query.bindValue(
-        ":end_date",
-        record.endDate.toString(Qt::ISODate)
-    );
+    query.bindValue(":end_date", record.endDate.toString(Qt::ISODate));
 
     query.bindValue(":type", record.type);
     query.bindValue(":country", record.country);
@@ -153,49 +126,31 @@ QVector<Record> Database::getAllRecords() const {
     return records;
 }
 
-bool Database::executeQuery(QSqlQuery& query) {
-    return query.exec();
-}
+bool Database::executeQuery(QSqlQuery &query) { return query.exec(); }
 
-Record Database::parseRecord(const QSqlQuery& query) const {
+Record Database::parseRecord(const QSqlQuery &query) const {
     Record record;
 
     record.id = query.value("id").toInt();
 
-    record.fullName = EncryptionManager::decrypt(
-        query.value("full_name").toByteArray()
-    );
+    record.fullName = EncryptionManager::decrypt(query.value("full_name").toByteArray());
 
-    record.homeAddress = EncryptionManager::decrypt(
-        query.value("home_address").toByteArray()
-    );
+    record.homeAddress = EncryptionManager::decrypt(query.value("home_address").toByteArray());
 
-    record.phoneNumber = EncryptionManager::decrypt(
-        query.value("phone_number").toByteArray()
-    );
+    record.phoneNumber = EncryptionManager::decrypt(query.value("phone_number").toByteArray());
 
-    record.hotelName = EncryptionManager::decrypt(
-        query.value("hotel_name").toByteArray()
-    );
+    record.hotelName = EncryptionManager::decrypt(query.value("hotel_name").toByteArray());
 
-    record.hotelAddress = EncryptionManager::decrypt(
-        query.value("hotel_address").toByteArray()
-    );
+    record.hotelAddress = EncryptionManager::decrypt(query.value("hotel_address").toByteArray());
 
-    record.startDate = QDate::fromString(
-        query.value("start_date").toString(),
-        Qt::ISODate
-    );
+    record.startDate = QDate::fromString(query.value("start_date").toString(), Qt::ISODate);
 
-    record.endDate = QDate::fromString(
-        query.value("end_date").toString(),
-        Qt::ISODate
-    );
+    record.endDate = QDate::fromString(query.value("end_date").toString(), Qt::ISODate);
 
     record.type = query.value("type").toString();
     record.country = query.value("country").toString();
 
-    record.hasFlight = query.value("has_flight").toBool();
+    record.hasFlight = query.value("has_flight").toString();
 
     record.participants = query.value("participants").toInt();
     record.price = query.value("price").toDouble();

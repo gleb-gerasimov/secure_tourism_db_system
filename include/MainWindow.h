@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    MainWindow(Controller* controller, QWidget* parent = nullptr);
+    MainWindow(Controller *controller, QWidget *parent = nullptr);
 
     ~MainWindow();
 
@@ -26,9 +26,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    Controller* m_controller;
+    Controller *m_controller;
 
-    void loadRecords(const QVector<Record>& records) const;
+    void loadRecords(const QVector<Record> &records) const;
     Record getRecordFromForm() const;
 };
 

@@ -5,14 +5,14 @@
 #ifndef SECURE_TOURISM_DB_SYSTEM_ENCRYPTIONMANAGER_H
 #define SECURE_TOURISM_DB_SYSTEM_ENCRYPTIONMANAGER_H
 
-#include <QString>
 #include <QByteArray>
+#include <QString>
 
 
 class EncryptionManager {
 public:
-    [[nodiscard]] static QByteArray encrypt(const QString& plainText);
-    [[nodiscard]] static QString decrypt(const QByteArray& encryptedData);
+    [[nodiscard]] static QByteArray encrypt(const QString &plainText);
+    [[nodiscard]] static QString decrypt(const QByteArray &encryptedData);
 
 private:
     static constexpr int KEY_SIZE = 32;

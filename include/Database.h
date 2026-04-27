@@ -5,8 +5,8 @@
 #ifndef SECURE_TOURISM_DB_SYSTEM_DATABASE_H
 #define SECURE_TOURISM_DB_SYSTEM_DATABASE_H
 
-#include <QVector>
 #include <QSqlQuery>
+#include <QVector>
 #include "Record.h"
 
 
@@ -15,21 +15,21 @@ public:
     Database();
     ~Database();
 
-    bool connect(const QString& path);
+    bool connect(const QString &path);
     void disconnect();
     [[nodiscard]] bool isOpen() const;
 
     bool initialize();
 
-    bool addRecord(const Record& record);
+    bool addRecord(const Record &record);
 
     [[nodiscard]] QVector<Record> getAllRecords() const;
 
 private:
     QSqlDatabase db;
 
-    static bool executeQuery(QSqlQuery& query);
-    [[nodiscard]] Record parseRecord(const QSqlQuery& query) const;
+    static bool executeQuery(QSqlQuery &query);
+    [[nodiscard]] Record parseRecord(const QSqlQuery &query) const;
 };
 
-#endif //SECURE_TOURISM_DB_SYSTEM_DATABASE_H
+#endif // SECURE_TOURISM_DB_SYSTEM_DATABASE_H
