@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="addRecordTab">
        <attribute name="title">
@@ -156,6 +156,16 @@
            </layout>
           </item>
           <item>
+           <widget class="QLabel" name="recordFeedbackLabel">
+            <property name="text">
+             <string>Заполните все поля</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="addRecordPushButton">
             <property name="text">
              <string>Добавить</string>
@@ -170,7 +180,7 @@
        <attribute name="title">
         <string>Просмотр таблицы</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <layout class="QVBoxLayout" name="verticalLayout_9">
         <item>
          <layout class="QVBoxLayout" name="tableVerticalLayout">
           <item>
@@ -254,11 +264,22 @@
              </layout>
             </item>
             <item>
-             <widget class="QPushButton" name="tableFindPushButton">
-              <property name="text">
-               <string>Найти</string>
-              </property>
-             </widget>
+             <layout class="QVBoxLayout" name="tableSearchVerticalLayout">
+              <item>
+               <widget class="QLabel" name="findLabel">
+                <property name="text">
+                 <string>Пустое поле - любое значение</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="tableFindPushButton">
+                <property name="text">
+                 <string>Найти</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
