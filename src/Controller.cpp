@@ -3,8 +3,8 @@
 //
 
 #include "../include/Controller.h"
-#include "Database.h"
-#include "SearchManager.h"
+#include "../include/Database.h"
+#include "../include/SearchManager.h"
 
 
 Controller::Controller(Database *database, SearchManager *searchManager) :
