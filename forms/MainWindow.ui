@@ -126,13 +126,6 @@
               </property>
              </widget>
             </item>
-            <item row="9" column="1">
-             <widget class="QCheckBox" name="recordHasFlightCheckBox">
-              <property name="text">
-               <string>Присутствует</string>
-              </property>
-             </widget>
-            </item>
             <item row="10" column="0">
              <widget class="QLabel" name="recordParticipantsLabel">
               <property name="text">
@@ -151,7 +144,30 @@
              </widget>
             </item>
             <item row="11" column="1">
-             <widget class="QDoubleSpinBox" name="recordPriceDoubleSpinBox"/>
+             <widget class="QDoubleSpinBox" name="recordPriceDoubleSpinBox">
+              <property name="maximum">
+               <double>99999999.989999994635582</double>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="QComboBox" name="recordHasFlightComboBox">
+              <item>
+               <property name="text">
+                <string>Не указано</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Да</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Нет</string>
+               </property>
+              </item>
+             </widget>
             </item>
            </layout>
           </item>
@@ -255,10 +271,25 @@
                <widget class="QDoubleSpinBox" name="tablePriceDoubleSpinBox"/>
               </item>
               <item row="4" column="1">
-               <widget class="QCheckBox" name="tableHasFlightCheckBox">
-                <property name="text">
-                 <string>Присутствует</string>
+               <widget class="QComboBox" name="tableHasFlightComboBox">
+                <property name="currentText">
+                 <string>Не указано</string>
                 </property>
+                <item>
+                 <property name="text">
+                  <string>Не указано</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Да</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Нет</string>
+                 </property>
+                </item>
                </widget>
               </item>
              </layout>
