@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="addRecordTab">
        <attribute name="title">
@@ -146,7 +146,7 @@
             <item row="11" column="1">
              <widget class="QDoubleSpinBox" name="recordPriceDoubleSpinBox">
               <property name="maximum">
-               <double>99999999.989999994635582</double>
+               <double>999999999.990000009536743</double>
               </property>
              </widget>
             </item>
@@ -268,7 +268,11 @@
                </widget>
               </item>
               <item row="6" column="1">
-               <widget class="QDoubleSpinBox" name="tablePriceDoubleSpinBox"/>
+               <widget class="QDoubleSpinBox" name="tablePriceDoubleSpinBox">
+                <property name="singleStep">
+                 <double>999999999.000000000000000</double>
+                </property>
+               </widget>
               </item>
               <item row="4" column="1">
                <widget class="QComboBox" name="tableHasFlightComboBox">
